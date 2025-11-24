@@ -1,3 +1,5 @@
+@import url("fonts/iosevka.css");
+
 :root {
     --purple: #9C59D1;
     --yellow: #FCF434;
@@ -7,7 +9,7 @@
 }
 
 body {
-    font-family: "Iosevka Bold";
+    font-family: "Iosevka", "sans-serif";
     margin: 8px;
     background: rgb(from var(--gray) calc(r / 2) calc(g / 2) calc(b / 2));
 }
@@ -112,6 +114,9 @@ li {
 
 .link {
     color: var(--purple);
+
+    font-family: "Iosevka ExtraBold", "sans-serif";
+
     text-decoration-line: none;
 }
 

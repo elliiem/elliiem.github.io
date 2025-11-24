@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Iosevka Bold";
+    src:
+        local("Iosevka Bold"),
+        local("Iosevka NF Bold"),
+        url("iosevka/Iosevka-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Iosevka ExtraBold";
+    src:
+        local("Iosevka ExtraBold"),
+        local("Iosevka NF ExtraBold"),
+        url("iosevka/Iosevka-ExtraBold.ttf");
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src:
+        local("Iosevka"),
+        local("Iosevka NF"),
+        url("iosevka/Iosevka-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
