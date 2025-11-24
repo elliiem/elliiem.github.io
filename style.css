@@ -112,3 +112,19 @@ li {
     font-size: 15pt;
     padding-left: 50px;
 }
+
+.link {
+    color: var(--purple);
+}
+
+.link:hover {
+    color: var(--yellow);
+}
+
+.link:visited {
+    color: rgb(from var(--purple) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5))
+}
+
+.link:hover:visited {
+    color: var(--yellow);
+}
