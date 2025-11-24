@@ -6,14 +6,8 @@
     --black: #000000;
 }
 
-/* @font-face { */
-/*     font-family: "Iosevka"; */
-/*     src: */
-/*         local("Iosevka"), */
-/*         url("Iosevka.ttf") */
-/* } */
-
 body {
+    font-family: "Iosevka Bold";
     margin: 8px;
     background: rgb(from var(--gray) calc(r / 2) calc(g / 2) calc(b / 2));
 }
@@ -38,7 +32,10 @@ li {
 
     border-radius: 5px;
 
-    background: rgb(from var(--purple) r g b / 0.5);
+    position: sticky;
+    top: 0px;
+
+    background: rgb(from var(--purple) calc(r * 0.8) calc(g * 0.8) calc(b * 0.8));
 }
 
 .header-bar-items {
@@ -115,6 +112,7 @@ li {
 
 .link {
     color: var(--purple);
+    text-decoration-line: none;
 }
 
 .link:hover {
