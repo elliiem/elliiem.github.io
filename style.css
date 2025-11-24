@@ -6,12 +6,12 @@
     --black: #000000;
 }
 
-@font-face {
-    font-family: "Iosevka";
-    src:
-        local("Iosevka"),
-        url("Iosevka.ttf")
-}
+/* @font-face { */
+/*     font-family: "Iosevka"; */
+/*     src: */
+/*         local("Iosevka"), */
+/*         url("Iosevka.ttf") */
+/* } */
 
 body {
     margin: 8px;
