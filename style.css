@@ -3,7 +3,7 @@
 :root {
     --purple: #9C59D1;
     --yellow: #FCF434;
-    --gray: #2C2C2C;
+    --gray: #202020;
     --white: #FFFFFF;
     --black: #000000;
 }
@@ -12,6 +12,9 @@ body {
     font-family: "Iosevka", "sans-serif";
     margin: 8px;
     background: rgb(from var(--gray) calc(r / 2) calc(g / 2) calc(b / 2));
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
 }
 
 svg {
@@ -26,35 +29,48 @@ li {
     color: var(--white);
 }
 
+div {
+    display: inherit;
+    flex-direction: column;
+}
+
+.main-window {
+    width: 99%;
+    height: 100%;
+    align-self: center;
+    border: 3px solid var(--black);
+    background: var(--gray);
+    /* border-radius: 20px; */
+}
+
 .header-bar {
     width: 100%;
-    height: 40px;
+    height: 30px;
+    border-bottom: 3px solid var(--black);
 
-    margin-top: 8px;
+    background: rgb(from var(--purple) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5));
 
-    border-radius: 5px;
-
-    position: sticky;
-    top: 0px;
-
-    background: rgb(from var(--purple) calc(r * 0.8) calc(g * 0.8) calc(b * 0.8));
+    flex-direction: column;
 }
 
 .header-bar-links {
-    width: 100%;
     height: 100%;
-
-    box-sizing: border-box;
-
-    padding: 5px;
+    width: max-content;
     gap: 5px;
 
-    flex-direction: row-reverse;
-    display: flex;
+    align-self: initial;
+
+    flex-direction: row;
+
+    margin-left: 2px;
+    padding-right: 5px;
 }
 
 .header-bar-links>div {
-    aspect-ratio: 1;
+    flex-direction: row;
+    align-self: center;
+    height: 80%;
+    width: 100%;
 }
 
 @property --title-gradient-mix-1 {
@@ -104,12 +120,12 @@ li {
     font-weight: 900;
 
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.content {
+.main-window-content {
     font-size: 15pt;
-    padding-left: 50px;
+    padding-left: 10px;
 }
 
 .link {
@@ -136,11 +152,13 @@ li {
     padding: 5px;
     background: rgb(from var(--purple) r g b / 0.3);
     width: fit-content;
-    height: 50px;
+    flex-direction: row;
+    gap: 5px;
+    height: 40px;
 }
 
 .flags>img {
     opacity: 0.9;
-    height: 50px;
-    width: 100px;
+    height: 40px;
+    width: 80px;
 }
