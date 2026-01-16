@@ -3,7 +3,7 @@
     src:
         local("Iosevka NF Bold"),
         local("Iosevka Bold"),
-        url("iosevka/Iosevka-Bold.ttf");
+        url("iosevka/Iosevka-Bold.woff2");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -14,7 +14,7 @@
     src:
         local("Iosevka NF ExtraBold"),
         local("Iosevka ExtraBold"),
-        url("iosevka/Iosevka-ExtraBold.ttf");
+        url("iosevka/Iosevka-ExtraBold.woff2");
     font-weight: bolder;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@
     src:
         local("Iosevka NF"),
         local("Iosevka"),
-        url("iosevka/Iosevka-Regular.ttf");
+        url("iosevka/Iosevka-Regular.woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
