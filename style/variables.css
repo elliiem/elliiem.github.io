@@ -2,10 +2,26 @@
     --purple: #9C59D1;
     --yellow: #FCF434;
     --gray: #202020;
-    --light-gray: #777777;
     --white: #FFFFFF;
     --black: #000000;
 
+    --gap: 5px;
+
+    --window-border-color: var(--black);
+    --window-border-thickness: 3px;
+
     --window-decorator-height: 25px;
-    --window-decorator-text-color: var(--black)
+    --window-decorator-fg-color: rgb(from var(--purple) calc(r * 2) calc(g * 1.8) calc(b * 3));
+    --window-decorator-bg-color: rgb(from var(--purple) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5));
+    --window-decorator-dropdown-bg-color: var(--white);
+    --window-decorator-dropdown-bg-highlight: var(--gray);
+    --window-decorator-dropdown-fg-color: var(--black);
+    --window-decorator-dropdown-fg-highlight: var(--white);
+
+    --link: var(--purple);
+    --link-hover: var(--yellow);
+    --link-visited: rgb(from var(--purple) calc(r * 0.75) calc(g * 0.75) calc(b * 0.8));
+
+    --body-bg-color: rgb(from var(--gray) calc(r / 2) calc(g / 2) calc(b / 2));
+    --default-fg-color: var(--white);
 }

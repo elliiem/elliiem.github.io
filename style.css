@@ -3,11 +3,13 @@
 @import url("style/variables.css");
 @import url("style/window.css");
 
-body {
+* {
     font-family: "Iosevka", "sans-serif";
+}
 
-    background: rgb(from var(--gray) calc(r / 2) calc(g / 2) calc(b / 2));
-    color: var(--white);
+body {
+    background: var(--body-bg-color);
+    color: var(--default-fg-color);
 
     display: flex;
     flex-direction: column;
@@ -18,10 +20,29 @@ div {
     flex-direction: column;
 }
 
+a {
+    color: var(--link);
+
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+
+a:visited {
+    color: var(--link-visited);
+}
+
+a:hover:visited {
+    color: var(--link-hover);
+}
+
 .top-windows {
     flex-direction: row;
 
-    gap: 5px;
+    gap: var(--gap);
 }
 
 .intro-window {
@@ -40,7 +61,7 @@ div {
     flex: 1;
     flex-direction: column;
 
-    gap: 5px;
+    gap: var(--gap);
 }
 
 @media only screen and (min-width: 750px) {
@@ -50,7 +71,7 @@ div {
 }
 
 .flag-window>.window-content {
-    margin: 5px;
+    margin: var(--gap);
 }
 
 @property --title-gradient-mix-1 {
@@ -101,25 +122,4 @@ div {
 
     margin-top: 20px;
     margin-bottom: 10px;
-}
-
-.link {
-    color: var(--purple);
-
-    font-family: "Iosevka ExtraBold", "sans-serif";
-
-    text-decoration-line: none;
-}
-
-.link:hover {
-    color: var(--yellow);
-}
-
-
-.link:visited {
-    color: rgb(from var(--purple) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5))
-}
-
-.link:hover:visited {
-    color: var(--yellow);
 }
