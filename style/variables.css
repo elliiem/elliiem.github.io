@@ -1,0 +1,11 @@
+:root {
+    --purple: #9C59D1;
+    --yellow: #FCF434;
+    --gray: #202020;
+    --light-gray: #777777;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --window-decorator-height: 25px;
+    --window-decorator-text-color: var(--black)
+}
