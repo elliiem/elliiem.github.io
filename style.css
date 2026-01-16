@@ -1,4 +1,5 @@
 @import url("fonts/iosevka.css");
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
 
 :root {
     --purple: #9C59D1;
@@ -34,43 +35,129 @@ div {
     flex-direction: column;
 }
 
-.main-window {
-    width: 99%;
-    height: 100%;
-    align-self: center;
-    border: 3px solid var(--black);
-    background: var(--gray);
-    /* border-radius: 20px; */
+svg {
+    overflow: visible;
 }
 
-.header-bar {
+.top-windows {
+    flex-direction: row;
+    gap: 5px;
+}
+
+.window {
+    flex-direction: column;
+    border: 3px solid var(--black);
+    background: var(--gray);
+}
+
+.intro-window {
+    width: max-content;
+    align-self: start;
+    flex: 2;
+}
+
+.window-decoration {
     width: 100%;
-    height: 30px;
+    height: 25px;
     border-bottom: 3px solid var(--black);
 
     background: rgb(from var(--purple) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5));
 
-    flex-direction: column;
+    flex-direction: row;
+
+    overflow: visible;
 }
 
-.header-bar-links {
+.window-decoration>div {
     height: 100%;
-    width: max-content;
-    gap: 5px;
-
-    align-self: initial;
-
     flex-direction: row;
-
-    margin-left: 2px;
-    padding-right: 5px;
+    align-items: center;
 }
 
-.header-bar-links>div {
-    flex-direction: row;
-    align-self: center;
-    height: 80%;
-    width: 100%;
+.window-tools {
+    margin-left: 5px;
+    flex-direction: column;
+
+    align-self: start;
+    align-items: start;
+
+    flex: 1;
+}
+
+.window-tools .window-tools-entry {
+    height: 100%;
+}
+
+.window-tools .window-tools-entry .window-tool-title {
+    text-decoration: underline;
+    height: 100%;
+    justify-content: center;
+}
+
+.window-tools:hover .window-tools-entry .window-tool-title {
+    height: 25px;
+    justify-content: center;
+}
+
+.window-tools .window-tools-entry .window-tool-socials-dropdown {
+    background: #ffffff;
+
+    width: 0px;
+    height: 0px;
+
+    color: transparent;
+}
+
+.window-tools .window-tools-entry .window-tool-socials-dropdown>div>a {
+    color: transparent;
+}
+
+.window-tools .window-tools-entry .window-tool-socials-dropdown:focus-within>div>a,
+.window-tools:hover .window-tools-entry .window-tool-socials-dropdown>div>a {
+    color: var(--black);
+}
+
+.window-tools:hover .window-tools-entry .window-tool-socials-dropdown,
+.window-tools .window-tools-entry .window-tool-socials-dropdown:focus-within {
+    visibility: visible;
+
+    width: auto;
+    height: auto;
+
+    overflow: visible;
+    display: inline;
+    text-wrap: nowrap;
+
+    position: relative;
+
+    top: 5px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    color: var(--black);
+}
+
+.window-decoration .window-title {
+    width: 30%;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.window-decoration .window-buttons {
+    justify-content: end;
+    margin-right: 5px;
+    flex: 1;
+}
+
+.window-flag-enby {
+    flex: 1;
+    height: max-content;
+}
+
+.window-flag-enby>.window-content {
+    margin: 5px;
 }
 
 @property --title-gradient-mix-1 {
@@ -116,16 +203,17 @@ div {
 }
 
 .title>p {
-    font-size: 60pt;
+    font-size: 6vw;
     font-weight: 900;
 
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.main-window-content {
+.window-content {
     font-size: 15pt;
-    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .link {
@@ -139,6 +227,7 @@ div {
 .link:hover {
     color: var(--yellow);
 }
+
 
 .link:visited {
     color: rgb(from var(--purple) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5))
